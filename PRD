@@ -1,0 +1,225 @@
+PRODUCT REQUIREMENTS DOCUMENT
+Project Name
+Working Name: _____Dr. Paw’s academy_______________
+Version: Prototype / Alpha
+Date: _________19-06-2026___________
+Owner: __________Zarah Bontinck__________
+
+1. Product Vision
+What problem does this product solve?
+A fun place to practice and study real life cases in a general Vet clinic
+Who is it for?
+Experienced vets that want to practice or student vets that want to have a more fun approach to study cases.
+What makes it different?
+It’s a web-based educational platform where veterinary students and practicing veterinarians improve clinical reasoning skills through realistic veterinary cases, in an interactive way. Also a user base to share cases that can be implemented in the game for continuous updated cases. Progress based and leaderboards so they can keep track of their performance.
+2. Success Criteria
+How will I know the prototype is successful?
+•	My girlfriend enjoys using it
+•	Users complete cases
+•	Users understand learning points
+
+3. Target Users
+Primary users:
+•	Practicing veterinarians
+•	Recent veterinary graduates
+Secondary users:
+•	Veterinary students
+•	Veterinary nurses
+4. Core User Journey
+Step 1: User can log in or creates profile
+(Step 1.2): After profile creation and email confirmation, they personalize their profile by choosing avatar (lgbtq gender friendly forms)
+Step 2: user gets a prompt in the main page to start first case
+Step 2.3: first cas eis always the same case for every user, 
+Step 3: User goes into conversation with owner, owner has text bubble to explain the complaints. User can proceed to see the patient information
+Step 4: User has to decide which department it should go to/ which examination should be done as first step
+Step 5: user then can order diagnostic results and review
+Step 6: user has to chose treatment plan based on options given
+Step 7: user receives outcome and educational feedback
+Step 8: User earns Pawsomemeter points for each case solved
+
+5. MVP Features
+Must Have:
+•	User profile
+•	 Dashboard
+•	Case start screen
+•	History taking
+•	Physical exam
+•	 Diagnostics
+•	 Diagnosis selection
+•	Treatment selection
+•	Outcome screen
+•	Learning summary
+•	Pawsome-meter (thermometer where the indicator is paw shaped that goes more up for points earned)
+6. Future Features
+Community page to share cases on that has to be reviewed by verified users (verified vets)
+Personalisable avatar (basic personalization)
+Patients from where they can view different cats and dogs with different cases so they can chose which case they want to start
+7. Case Structure
+Patient CARD
+Species: 
+Breed:
+Age:
+gender:
+Presenting complaint:
+History + medication history
+Diet :
+Last food intake:
+Aggressive level:
+During examination
+Physical findings:
+Diagnostics:
+Diagnosis:
+Treatment:
+Outcome:
+Learning points:
+References:
+8. Pawsome-meter System
+How are points earned?
+Complete case: +3% +1 paw point
+Perfect case: increase: +5% + 3 paw points
+How are POINTS/PROGRESS FROZEN?
+By not playing for a certain amount of time,  like less then 3 times a week. Not playing or many wrong answers just means no progress. 
+What happens at 100 points?
+When user reaches 100% on the meter they get 1 rank up. It resets the meter and they receive 100 paw points, the currency, and the amount of meters they got filled gives them badges
+They can unlock hospital teams, pets and pet clothes.
+
+9. User Roles
+User Student:
+User permissions only
+User Veterinarian:
+User permissions only + able to pubish cases for review on the community page
+Admin:
+Log in as user, Log in system back end, can recover pw and reset, can review cases submitted by vet users.
+10. Technical Requirements
+Platform:
+Web App
+Mobile Friendly:
+Yes 
+Authentication:
+Use:
+•	Google login 
+•	Email login 
+•	Apple login 
+Through Supabase Auth.
+Secrets
+•	API keys 
+•	Database passwords 
+Store them in:
+•	Vercel Environment Variables 
+
+4. HTTPS
+Vercel automatically gives:
+•	SSL certificate 
+•	HTTPS 
+No extra work.
+
+5. Rate Limiting
+Protect against abuse:
+Examples:
+•	Max 10 logins/minute 
+•	Max 20 case submissions/hour 
+This can be added later.
+
+Images
+ want many animal images:
+Store them in:
+•	Supabase Storage 
+Organize like:
+cases/
+  dogs/
+  cats/
+
+avatars/
+badges/
+Thailand Access
+•	Vercel 
+•	Supabase 
+
+Users in:
+•	Belgium 
+•	Thailand 
+•	Europe 
+•	US 
+should all be able to access it normally.
+Avoid hosting on a small local Belgian server.
+Database:
+Enable Supabase Row Level Security (RLS).
+
+User A:
+•	Can see their profile 
+•	Can see their scores 
+User B:
+•	Cannot access User A's data 
+Even if they try manipulating requests.
+
+Hosting:
+Via vercel?
+
+11. Risks
+What are the biggest risks?
+1:To much scope
+already mentioned:
+•	profiles 
+•	badges 
+•	Vetrometer 
+•	flashcards 
+•	community cases 
+•	sharing 
+•	rankings 
+•	journals 
+•	study mode 
+This can become a monster project.
+
+Mitigation:
+For Alpha:
+•	1 user profile 
+•	10 cases 
+•	Vetrometer 
+•	nothing else
+
+2: difficulty in creating:
+•	50 accurate cases 
+•	realistic diagnostics 
+•	realistic treatments 
+•	learning explanations 
+•	references 
+ may discover:
+"I can build the platform but I only have 5 cases."
+Risk 2: Medical Accuracy
+If a veterinarian finds obvious mistakes: lose trust
+Mitigation:
+•	Every case reviewed by a vet 
+•	References included 
+•	AI only restructures content, not invents medicine 
+
+3: Target Audience Is Too Busy
+Single Point of Failure
+Right now:
+•	me= product manager 
+•	me = designer 
+•	Girlfriend = medical expert 
+If girlfriend gets busy, content may stop.
+Mitigation:
+•	Document case templates 
+•	Build a contributor system later 
+•	Find additional vets willing to help 
+
+5: Copyright Issues
+Mitigation:
+•	Use cases as inspiration 
+•	Rewrite in your own format 
+•	Use licensed or original images
+•	
+6: Not Enough Differentiation
+Why am I different
+•	full case progression 
+•	treatment decisions 
+•	outcome simulation 
+•	progression system 
+•	community cases 
+•	study tools
+7: AI Hallucinations
+Mitigation:
+•	Human-reviewed cases only 
+•	AI assists formatting, not medical decisions
+
